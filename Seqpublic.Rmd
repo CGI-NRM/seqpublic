@@ -9,11 +9,23 @@ output:
 library(crosstalk)
 library(leaflet)
 library(DT)
+library(DBI) # For reading postgres view
 
-# Import example data
-df <- read.csv("Example_data.csv")
 
-#Convert to Date format
+# 1. Create connection to database                                     
+# 2. Fetch complete table
+# 3. Disconnect
+con <- dbConnect(RPostgres::Postgres(),dbname = 'DATABASE_NAME', 
+                 host = 'HOST',
+                 port = 5432, 
+                 user = 'USERNAME',
+                 password = 'PASSWORD')
+
+df <- dbReadTable(con, "tablename")
+
+dbDisconnect(con)
+
+#Convert to Date format if needed
 df$Date <- as.Date(as.character(df$Date))
 
 # Create shared object so that filtering map == filter table
