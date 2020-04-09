@@ -1,0 +1,41 @@
+---
+title: DNA prover CGI, NRM
+output: 
+  html_document
+---
+
+
+```{r, echo=FALSE, message=FALSE}
+library(crosstalk)
+library(leaflet)
+library(DT)
+
+# Import example data
+df <- read.csv("Example_data.csv")
+
+#Convert to Date format
+df$Date <- as.Date(as.character(df$Date))
+
+# Create shared object so that filtering map == filter table
+dfs <- SharedData$new(df)
+
+# Simple slider for selecting dates
+filter_slider("date", "Datum", dfs, column=~Date, width=250)
+
+# Create datatable, list language options fetches swedish translation 
+# for general table functions whereas the shown column names are hard coded.
+datatable(dfs, width = "100%", 
+          colnames = c("Släkte", "Art", "Län", "Kommun", "Latitude", "Longitude", 
+                       "Id", "Kön", "Datum"), 
+          rownames = FALSE,
+          options = list(language = list(
+            url = '//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Swedish.json')),
+          selection = "multiple")
+
+# Generate map, zoom is determined by the range from the coordinates
+leaflet(dfs, width = "100%") %>% 
+  addTiles() %>%
+  addMarkers(~ decimallongitude, ~ decimallatitude)
+
+```
+
