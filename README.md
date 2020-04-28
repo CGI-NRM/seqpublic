@@ -1,4 +1,4 @@
-## Test page for seqpublic R version
+## Test showing public part of seqdb
 
 [The page](https://cgi-nrm.github.io/seqpublic/)
 
