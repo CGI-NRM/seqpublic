@@ -1,6 +1,6 @@
 ## Test page for seqpublic R version
 
-[The page](https://cgi-nrm.github.io/seqpublic/Seqpublic.html)
+[The page](https://cgi-nrm.github.io/seqpublic/)
 
 This page show examples of interactive wep pages showing samples from inventories of data. If you want to add a new version create a new branch and use whatever framework or tools you like to generate a web page that can be shown here. Note if you are using tooling that require a server back-end deploy on a suitable location and a link here.
 
