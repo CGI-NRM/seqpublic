@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## Test page for seqpublic R version
 
-You can use the [editor on GitHub](https://github.com/CGI-NRM/seqpublic/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This page show examples of interactive wep pages showing samples from inventories of data. If you want to add a new version create a new branch and use whatever framework or tools you like to generate a web page that can be shown here. Note if you are using tooling that require a server back-end deploy on a suitable location and a link here.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. [Simple html5 page generated from R](https://cgi-nrm.github.io/seqpublic/Seqpublic.html)
+  NB! This is does not require a back-end.
 
-### Markdown
+2. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
+## On using GH to show webpages
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/CGI-NRM/seqpublic/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
